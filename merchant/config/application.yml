@@ -1,0 +1,38 @@
+spring:
+    application:
+        name: merchant
+    jackson:
+        time-zone: Asia/Ho_Chi_Minh
+            
+server:
+  port: 8081
+ 
+database:
+    online:
+        driver-class-name: oracle.jdbc.OracleDriver
+        url: jdbc:oracle:thin:@10.22.7.63:1521:GTGTTEST
+        username: MMS
+        password: mms
+    offline:
+        driver-class-name: oracle.jdbc.OracleDriver
+        url: jdbc:oracle:thin:@10.22.7.23:1521:OFFLINE
+        username: mmsoff
+        password: mmsoff
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://10.22.7.180:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"   
+url: 
+    terminal: http://localhost:8082/terminal/add
+logging:
+  config: file:${workdir:.}/config/log4j2.xml
+
+

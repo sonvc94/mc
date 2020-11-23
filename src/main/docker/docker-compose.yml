@@ -1,0 +1,10 @@
+version: '2'
+services:
+  confirm-app:
+    build: ./app
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - GR_CONFIRM_SECRET_KEY=ABCDEFGH123
+      - TZ=Asia/Ho_Chi_Minh
+    ports:
+      - 8080:8080
