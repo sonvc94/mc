@@ -15,7 +15,7 @@ docker-compose up -d
 ## Usage
 
 
-1. implement TransactionCore or modify TransactionImpl to integrate with Merchant System
+1. implement TransactionCore or modify FakeTransactionCoreImpl to integrate with Merchant System
 2. write adapter to convert confirm request to merchant request and merchant response to confirm response 
 
 

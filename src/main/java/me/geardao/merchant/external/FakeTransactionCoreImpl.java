@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 //fake implement
-public class TransactionCoreImpl implements TransactionCore {
+public class FakeTransactionCoreImpl implements TransactionCore {
 
     @Override
     public Transaction getTransactionById(String id) {

@@ -2,7 +2,7 @@ package me.geardao.merchant;
 
 import com.google.gson.Gson;
 import me.geardao.merchant.external.TransactionCore;
-import me.geardao.merchant.external.TransactionCoreImpl;
+import me.geardao.merchant.external.FakeTransactionCoreImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -21,7 +21,7 @@ public class MerchantApplication {
 
     @Bean
     TransactionCore transactionCore() {
-        return new TransactionCoreImpl();
+        return new FakeTransactionCoreImpl();
     }
 
 }
